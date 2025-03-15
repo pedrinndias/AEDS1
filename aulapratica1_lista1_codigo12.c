@@ -4,6 +4,6 @@ int main(){
     printf("Escreva a hora e os minutos: ");
     scanf("%d %d", &hora, &minutos);
     tempfinal=hora*60+minutos;
-    printf("O tempo total em minutos eh: %d\n", tempfinal);
+    printf("O tempo total em minutos e: %d\n", tempfinal);
     return 0;
 }
