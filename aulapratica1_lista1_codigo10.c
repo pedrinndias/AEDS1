@@ -6,7 +6,7 @@ int main (){
     c=a;
     a=b;
     b=c;
-    printf("A agora vale: %f", a);
-    printf("B agora vale: %f", b);
+    printf("A agora vale: %.2f\n", a);
+    printf("B agora vale: %.2f\n", b);
     return 0;
 }
