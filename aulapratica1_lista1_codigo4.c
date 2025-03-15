@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include <corecrt_math_defines.h>
 int main(){
     int raio;
     float area, perimetro;
