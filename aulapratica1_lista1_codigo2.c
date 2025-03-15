@@ -13,4 +13,4 @@ int main(){
     printf("O valor a ser pago e: %f\n", vasp);
     printf("O valor a ser pago por killowat e: %f", consta);
 return 0;
-}
+} 
