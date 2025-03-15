@@ -3,7 +3,7 @@ int main(){
     int num, suc;
     printf("Escreva um numero entre 0 e 60: ");
     scanf("%d", &num);
-    if((num>=0)||(num<=60)){
+    if((num>=0)||(num<60)){
         suc=num+1;
         printf("O sucessor de %d e: %d\n", num, suc);
     }
