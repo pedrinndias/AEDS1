@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-   float p, i, n, rend;
+   float p, i, rend;
+   int n;
    printf("Escreva o capital, a taxa de juros e o tempo: ");
     scanf("%f %f %f", &p, &i, &n);
     rend=(p*((pow(1+i, n)-1)/i));
