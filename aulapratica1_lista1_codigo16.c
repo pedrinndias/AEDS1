@@ -14,3 +14,4 @@ int main(){
     printf("O numero de dvd's restantes e: %.2f\n", dvdfinal);
     return 0;
 }
+//codigo com erro no script, precisa-se corrigir!
