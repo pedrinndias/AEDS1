@@ -10,7 +10,7 @@ int main(){
     vasp=consta*qgdk;
     desc= vasp/10;
     vasp=vasp-desc;
-    printf("O valor a ser pago e: %f\n", vasp);
-    printf("O valor a ser pago por killowat e: %f", consta);
+    printf("O valor a ser pago e %f\n", vasp);
+    printf("O valor a ser pago por killowat e %f", consta);
 return 0;
 } 
