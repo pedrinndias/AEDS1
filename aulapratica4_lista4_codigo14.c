@@ -6,10 +6,11 @@ int main(){
     scanf("%d", &n);
     if(n==1){
         soma=1;
-    } else for (int i = 1; i <= n; i++){
+    } else if(n>=2){
+        for (int i = 1; i <= n; i++){
         denominador = i+1;
         soma = 1+1/denominador;
     }
+    }
     printf("O valor da soma e: %.2f\n", soma);
     return 0;
-}
