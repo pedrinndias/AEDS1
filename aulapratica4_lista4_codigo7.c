@@ -10,5 +10,6 @@ int main(){
     } 
     while(nota<0 || nota>10);
     printf("Nota registrada: %.2f\n", nota);
+    printf("Fim do programa\n");
     return 0;
 }
