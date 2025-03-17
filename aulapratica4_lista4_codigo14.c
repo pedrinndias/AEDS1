@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int denominador, n;
+    int denominador, n,numerado;
     float soma, numerador;
     printf("Escreva um numero inteiro: ");
     scanf("%d", &n);
@@ -10,7 +10,7 @@ int main(){
     } else for (int i = 1; i <= n; i++){
         numerador = i;
         denominador = i+1;
-        soma = soma + numerador/denominador;
+        soma = soma + (float)numerador/denominador;
     }
     printf("O valor da soma e: %.2f\n", soma);
     return 0;
