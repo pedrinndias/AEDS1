@@ -15,7 +15,8 @@ int main(){
     }
     }
     soma = 1+1/denominador;
-}
     printf("O valor da soma e: %2.f\n", soma);
+}
+    
     return 0;
 }
