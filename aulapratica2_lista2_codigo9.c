@@ -8,7 +8,7 @@ int main(){
     scanf("%f", &b);
     printf("Digite o valor de c: ");
     scanf("%f", &c);
-    y:a+(b/(c+a))+ (2*(a-b))+8;
+    y=a+(b/(c+a))+ (2*(a-b))+8;
     printf("O valor de y e: %f\n", y);
     return 0;
 }
