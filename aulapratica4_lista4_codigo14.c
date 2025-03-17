@@ -14,3 +14,4 @@ int main(){
     }
     printf("O valor da soma e: %.2f\n", soma);
     return 0;
+}
