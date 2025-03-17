@@ -8,9 +8,9 @@ int main(){
     if(n==1){
         soma=1;
     } else for (int i = 1; i <= n; i++){
-        numerador = i;
+        numerador = 1;
         denominador = i+1;
-        soma = soma + (float)numerador/denominador;
+        soma = soma +(numerador/denominador);
     }
     printf("O valor da soma e: %.2f\n", soma);
     return 0;
