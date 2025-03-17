@@ -7,7 +7,7 @@ int main(){
     printf("Escreva sua altura: ");
     scanf("%d", &altura);
     printf("Escreva seu nome: ");
-    scanf(nome, 50, stdin);
+    scanf("%s", nome);
     printf("Nome: %s\n", nome);
     printf("Idade: %d\n", idade);
     printf("Altura: %d\n", altura);
