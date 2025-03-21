@@ -6,10 +6,10 @@ resultado+=2;
 return resultado;
 }
 int main(){
-    int n, termo;
+    int n_esimo, termo;
     printf("Escreva numero n:");
-    scanf("%d", &n);
-    termo= par(n);
+    scanf("%d", &n_esimo);
+    termo= par(n_esimo);
     printf("o n-esimo termo eh %d", termo);
     return 0;
 }
