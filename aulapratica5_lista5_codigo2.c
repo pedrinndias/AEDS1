@@ -6,19 +6,20 @@ int par(int n){
 }
 return resultado;
 }
-void mostrarparemordemdecrescente(int n){
-    int valor;
+int mostrarparemordemdecrescente(int n){
+    int valor=0;
         for(int i=n; i>0; i--){
             valor=par(i);
             if(valor<n)
-                printf("%d" valor);
+                printf("%d", valor);
 }
-    return resultado;
+    return valor;
 }
 int main(){
     int n_esimo, termo;
         printf("Escreva numero n:");
-        scanf("%d" &n_esimo);
-        mostrarparemordemdecrescente(n_esimo)
+        scanf("%d", &n_esimo);
+        termo = mostrarparemordemdecrescente(n_esimo);
+        printf("o n-esimo termo eh %d", termo);
         return 0;
 }
