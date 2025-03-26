@@ -4,7 +4,6 @@ double umSobreImpar(int n){
     int denominador=1;
     for(int i=1; i<=n; i++){
         resultado= 1.0 /(denominador+= 2);
-        
 }
 
 return resultado;
