@@ -1,5 +1,5 @@
 #include<stdio.h>
-    void (int*a , int*b){
+    void troca (int*a , int*b){
         int aux;
         *a = aux;
         *a = *b;
@@ -10,7 +10,7 @@
         int a, b;
         printf("Escreva dois valores inteiros: ");
         scanf("%d%d", &a , &b);
-        void ()
+        void troca()
         printf("Os valores trocados sao: %d,%d" a , b);
         return 0;
     }
