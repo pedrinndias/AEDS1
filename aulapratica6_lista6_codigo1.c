@@ -14,3 +14,4 @@
         printf("Os valores trocados sao: %d,%d", a, b);
         return 0;
     }
+    // chamar professor para entender o problema
