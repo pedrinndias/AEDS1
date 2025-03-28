@@ -10,7 +10,7 @@
         int a, b;
         printf("Escreva dois valores inteiros: ");
         scanf("%d%d", &a , &b);
-        void (a, b)
+        void ()
         printf("Os valores trocados sao: %d,%d" a , b);
         return 0;
     }
