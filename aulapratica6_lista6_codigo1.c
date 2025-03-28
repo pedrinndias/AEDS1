@@ -1,9 +1,9 @@
 #include<stdio.h>
     void troca (int*a , int*b){
         int aux;
-        *a = aux;
-        *a = *b;
-        *b = aux;
+        aux = *a;
+        *b = *a;
+        aux = *b;
         return;
     }
     int main(){
