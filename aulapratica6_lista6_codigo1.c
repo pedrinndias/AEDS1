@@ -2,8 +2,8 @@
     void troca (int*a , int*b){
         int aux;
         aux = *a;
-        *b = *a;
-        aux = *b;
+        *a = *b;
+        *b = aux;
         return;
     }
     int main(){
