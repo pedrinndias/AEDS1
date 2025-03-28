@@ -9,7 +9,7 @@ int main(){
     printf("Escreva dois valores inteiros: ");
     scanf("%d%d", &val1, &val2);
     calculaOperacoes (val1, val2, &soma, &produto);
-    printf("A soma eh: %d", soma);
-    printf("O produto eh: %d", produto);
+    printf("A soma eh: %d\n", soma);
+    printf("O produto eh: %d\n", produto);
     return 0;
 }
