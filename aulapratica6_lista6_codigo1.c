@@ -4,7 +4,6 @@
         aux = *a;
         *b = *a;
         aux = *b;
-        printf("Os valores trocados sao: %d,%d", a, b);
         return;
     }
     int main(){
@@ -12,5 +11,6 @@
         printf("Escreva dois valores inteiros: ");
         scanf("%d%d", &a , &b);
         void troca();
+        printf("Os valores trocados sao: %d,%d", a, b);
         return 0;
     }
