@@ -12,28 +12,24 @@ int main() {
         scanf("%d", &opcao);
         switch(opcao) {
             case 1:
-                printf("Você escolheu somar dois numeros.\n");
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 + num2;
                 printf("Resultado: %.2f\n", resultado);
                 break;
             case 2:
-                printf("Você escolheu subtrair dois numeros.\n");
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 - num2;
                 printf("Resultado: %.2f\n", resultado);
                 break;
             case 3:
-                printf("Você escolheu multiplicar dois numeros.\n");
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 * num2;
                 printf("Resultado: %.2f\n", resultado);
                 break;
             case 4:
-                printf("Você escolheu dividir dois numeros.\n");
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 if (num2 != 0) {
