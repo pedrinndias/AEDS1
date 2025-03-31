@@ -1,6 +1,6 @@
 #include<stdio.h>
 float media(*n,*quantN){
-    int seq=0;
+    float seq=0;
     float media;
     seq += *n;
     media = seq / *quantN;
