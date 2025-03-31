@@ -2,8 +2,8 @@
 int media(*n, *quantN){
     int seq;
     float media;
-    seq+=*n;
-    media =seq/quantN;
+    seq += *n;
+    media =seq / *quantN;
     return media;
 }
 int main(){
@@ -12,7 +12,7 @@ int main(){
     for(int i=0; n!= 0; i++){
         printf("Escreva um numero: ");
         scanf("%d", &n);
-        if ((n%2) !== 0){
+        if ((n%2) != 0){
         quantImpares++;
         }
         if (n!=0){
