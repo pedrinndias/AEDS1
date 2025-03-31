@@ -2,8 +2,8 @@
 float media(int n,int quantN){
     float seq=0;
     float media;
-    seq += *n;
-    media = seq / *quantN;
+    seq += n;
+    media = seq / quantN;
     return media;
 }
 int main(){
