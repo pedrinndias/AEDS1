@@ -1,13 +1,13 @@
 #include<stdio.h>
-int media(*n, *quantN){
-    int seq;
+float media(*n, *quantN){
+    int seq=0;
     float media;
     seq += *n;
-    media =seq / *quantN;
+    media = seq / *quantN;
     return media;
 }
 int main(){
-    int n=1, quantImpares, quantN;
+    int n=1, quantImpares=0, quantN=0;
     float mediaf;
     for(int i=0; n!= 0; i++){
         printf("Escreva um numero: ");
@@ -18,7 +18,7 @@ int main(){
         if (n!=0){
         quantN++;
         }
-    mediaf = int media(&n, &quantN);
+    mediaf = media(&n, &quantN);
     }
     printf("A media dos numeros eh: %f\n", mediaf);
     printf("A quantidade de numeros impares eh: %d\n", quantImpares);
