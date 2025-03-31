@@ -1,6 +1,6 @@
 #include <stdio.h>
 void fatorial(int n, int*resultado){
-    for(int i=1, i<=n; i++){
+    for(int i=1; i<=n; i++){
         *resultado*=i;
     }
     return;
