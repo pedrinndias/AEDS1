@@ -16,18 +16,21 @@ int main() {
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 + num2;
+                printf("\n");
                 printf("Resultado: %.2f\n", resultado);
                 break;
             case 2:
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 - num2;
+                printf("\n");
                 printf("Resultado: %.2f\n", resultado);
                 break;
             case 3:
                 printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 * num2;
+                printf("\n");
                 printf("Resultado: %.2f\n", resultado);
                 break;
             case 4:
@@ -35,6 +38,7 @@ int main() {
                 scanf("%d %d", &num1, &num2);
                 if (num2 != 0) {
                     resultado = (float)num1 / num2;
+                    printf("\n");
                     printf("Resultado: %.2f\n", resultado);
                 }
                 break;
