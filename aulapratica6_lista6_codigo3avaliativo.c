@@ -20,8 +20,8 @@ int main(){
     int a, b, maior, menor;
     printf("Escreva dois numeros: ");
     scanf("%d %d", &a, &b);
-    maior =a>b?a:b;
-    menor =a<b?a:b;
+    maior = a>b ? a:b;
+    menor = a<b ? a:b;
     primoIntervalo(menor, maior);
     return 0;
 }
