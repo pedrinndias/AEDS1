@@ -11,6 +11,12 @@ int main() {
         printf("5. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
+        if (opcao == 5) {
+            printf("Saindo do programa\n");
+        } else {
+            if(opcao <= 0 || opcao > 5)    
+            printf("Opcao invalida\n");
+        }
         switch(opcao) {
             case 1:
                 printf("Digite dois numeros: ");
@@ -46,12 +52,5 @@ int main() {
         }    
     }
     while (opcao != 5);
-
-    if (opcao == 5) {
-        printf("Saindo do programa\n");
-    } else {
-        if(opcao <= 0 || opcao > 5)    
-        printf("Opcao invalida\n");
-    }
     return 0;
 }
