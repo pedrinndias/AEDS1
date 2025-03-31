@@ -46,6 +46,8 @@ int main() {
                     resultado = (float)num1 / num2;
                     printf("\n");
                     printf("Resultado: %.2f\n", resultado);
+                } else {
+                    printf("Erro: Divisao por zero nao eh permitida.\n");
                 }
                 break;
         
