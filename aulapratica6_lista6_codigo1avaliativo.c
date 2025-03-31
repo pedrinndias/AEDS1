@@ -2,7 +2,7 @@
 float media(int n,int quantN){
     float seq=0;
     float media;
-    seq += n;
+    seq = seq + n;
     media = seq / quantN;
     return media;
 }
