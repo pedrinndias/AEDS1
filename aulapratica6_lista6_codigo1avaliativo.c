@@ -1,25 +1,25 @@
-#include<stdio.h>
-float media(int n,int quantN){
-    float seq=0;
-    float media;
-    seq = seq + n;
-    media = seq / quantN;
-    return media;
-}
-int main(){
-    int n, quantImpares=0, quantN=0;
-    for(int i=0; n!= 0; i++){
+#include <stdio.h>
+int main() {
+    int numero, quantImpares = 0, quantN = 0;
+    float soma = 0;
+    do {
         printf("Escreva um numero: ");
-        scanf("%d", &n);
-        if ((n%2) != 0){
-        quantImpares++;
+        scanf("%d", &numero);
+        
+        if (numero != 0) {
+            soma += numero;
+            quantN++;
+            
+            if (numero % 2 != 0) {
+                quantImpares++;
+            }
         }
-        if (n!=0){
-        quantN++;
-        }
-    media(n, quantN);
+    } while (numero != 0);
+    if (quantN > 0) {
+        printf("A media dos numeros eh: %f\n", soma / quantN);
+    } else {
+        printf("Nenhum número foi inserido.\n");
     }
-    printf("A media dos numeros eh: %f\n", media(n, quantN));
     printf("A quantidade de numeros impares eh: %d\n", quantImpares);
-    return 0;   
+    return 0;
 }
