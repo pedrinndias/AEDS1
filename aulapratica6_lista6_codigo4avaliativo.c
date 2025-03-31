@@ -3,6 +3,7 @@ int main() {
     int opcao=0, num1=0, num2=0;
     float resultado=0;
     do{
+        printf("\n");
         printf("1. Somar dois numeros\n");
         printf("2. Subtrair dois numeros\n");
         printf("3. Multiplicar dois numeros\n");
