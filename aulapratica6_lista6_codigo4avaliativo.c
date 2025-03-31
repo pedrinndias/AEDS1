@@ -45,5 +45,9 @@ int main() {
 
     if (opcao == 5) {
         printf("Saindo do programa\n");
+    } else {
+        if(opcao <= 0 || opcao > 5)    
+        printf("Opcao invalida\n");
     }
+    return 0;
 }
