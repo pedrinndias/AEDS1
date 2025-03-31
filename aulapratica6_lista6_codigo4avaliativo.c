@@ -2,39 +2,39 @@
 int main() {
     int opcao=0, num1=0, num2=0;
     float resultado=0;
-    do
-        printf("1. Somar dois números\n");
-        printf("2. Subtrair dois números\n");
-        printf("3. Multiplicar dois números\n");
-        printf("4. Dividir dois números\n");
+    do{
+        printf("1. Somar dois numeros\n");
+        printf("2. Subtrair dois numeros\n");
+        printf("3. Multiplicar dois numeros\n");
+        printf("4. Dividir dois numeros\n");
         printf("5. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         switch(opcao) {
             case 1:
-                printf("Você escolheu somar dois números.\n");
-                printf("Digite dois números: ");
+                printf("Você escolheu somar dois numeros.\n");
+                printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 + num2;
-                printf("Resultado: %f\n", resultado);
+                printf("Resultado: %.2f\n", resultado);
                 break;
             case 2:
-                printf("Você escolheu subtrair dois números.\n");
-                printf("Digite dois números: ");
+                printf("Você escolheu subtrair dois numeros.\n");
+                printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 - num2;
-                printf("Resultado: %f\n", resultado);
+                printf("Resultado: %.2f\n", resultado);
                 break;
             case 3:
-                printf("Você escolheu multiplicar dois números.\n");
-                printf("Digite dois números: ");
+                printf("Você escolheu multiplicar dois numeros.\n");
+                printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 resultado = num1 * num2;
-                printf("Resultado: %f\n", resultado);
+                printf("Resultado: %.2f\n", resultado);
                 break;
             case 4:
-                printf("Você escolheu dividir dois números.\n");
-                printf("Digite dois números: ");
+                printf("Você escolheu dividir dois numeros.\n");
+                printf("Digite dois numeros: ");
                 scanf("%d %d", &num1, &num2);
                 if (num2 != 0) {
                     resultado = (float)num1 / num2;
@@ -42,7 +42,10 @@ int main() {
                 }
                 break;
         
-    }  while (opcao != 5);
+        }    
+    }
+    while (opcao != 5);
+
     if (opcao == 5) {
         printf("Saindo do programa\n");
     }
