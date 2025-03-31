@@ -42,8 +42,7 @@ int main() {
                 }
                 break;
         
-    }
-    while (opcao != 5);
+    }  while (opcao != 5);
     if (opcao == 5) {
         printf("Saindo do programa\n");
     }
