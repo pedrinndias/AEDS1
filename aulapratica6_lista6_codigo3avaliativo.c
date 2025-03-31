@@ -19,7 +19,7 @@ void primoIntervalo(int menor, int maior) {
         }
     }
     if (!encontrouPrimo) {
-        printf("Não existem números primos no intervalo informado.");
+        printf("Nao existem numeros primos no intervalo informado.");
     }
     printf("\n");
 }
