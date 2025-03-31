@@ -1,20 +1,27 @@
 #include <stdio.h>
-void verificador(int intervalo){
-    for(int i = (intervalo - 1); i >= 0; i--){
-        if(((intervalo % i)!=0) && ((intervalo % 1)!=0)){
-            verificador(i);
-            printf("%d ", intervalo);
+int ehPrimo(int num) {
+    if (num <= 1) return 0;
+    if (num <= 3) return 1;
+    if (num % 2 == 0 || num % 3 == 0) return 0;
+    for (int i = 5; i * i <= num; i += 6) {
+        if (num % i == 0 || num % (i + 2) == 0){
+            return 0;
         }
     }
-    return;
+    return 1;
 }
-void primoIntervalo (int menor, int maior){
-    for(int i = menor; i <= maior; i++){
-        verificador(i);
-        printf("\n");
-
+void primoIntervalo(int menor, int maior) {
+    int encontrouPrimo = 0;
+    for (int i = menor; i <= maior; i++) {
+        if (ehPrimo(i)) {
+            printf("%d ", i);
+            encontrouPrimo = 1;
+        }
     }
-    return;
+    if (!encontrouPrimo) {
+        printf("Não existem números primos no intervalo informado.");
+    }
+    printf("\n");
 }
 int main(){
     int a, b, maior, menor;
