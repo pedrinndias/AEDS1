@@ -9,7 +9,6 @@ int main() {
         printf("3. Multiplicar dois numeros\n");
         printf("4. Dividir dois numeros\n");
         printf("5. Sair\n");
-        printf("\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         switch(opcao) {
