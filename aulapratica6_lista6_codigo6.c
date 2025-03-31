@@ -1,6 +1,6 @@
 #include <stdio.h>
 void converteTermpo(int segundos, int*horas, int*minutos, int*segundosRestantes){
-    *horas=minutos/60;
+    *horas= *minutos/60;
     *minutos=segundos/60;
     *segundosRestantes=segundos%60;
     return;
