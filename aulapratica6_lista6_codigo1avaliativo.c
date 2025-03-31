@@ -18,7 +18,7 @@ int main(){
         if (n!=0){
         quantN++;
         }
-    mediaf = media(&n, &quantN);
+    mediaf = int media(&n, &quantN);
     }
     printf("A media dos numeros eh: %f\n", mediaf);
     printf("A quantidade de numeros impares eh: %d\n", quantImpares);
