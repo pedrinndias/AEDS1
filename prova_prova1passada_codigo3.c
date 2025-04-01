@@ -7,10 +7,11 @@ double sequencia(int n, float x){
             seq=0;
         } else if(i%2!=0){
             seq+=x/denominador;
+            denominador+=2;
         } else {
             seq-=x/denominador;
+            denominador+=2;
         }
-        denominador+=2;
         }
     return seq;
     }
@@ -22,7 +23,6 @@ int main(){
     scanf("%d", &n);
     printf("Digite um numero real: ");
     scanf("%f", &x);
-    sequencia(n, x);
     printf("Sequencia: %.2f\n",sequencia(n, x));
     return 0;
 }
