@@ -5,9 +5,9 @@ int main(){
     printf("Digite um numero inteiro: ");
     scanf("%d", &n);
     if((n%2)==0){
-        printf("%d", pow(n, 2));
+        printf("%.0f", pow(n, 2));
     }else{ if((n%2)!=0){
-        printf("%d", pow(n, 3));
+        printf("%.0f", pow(n, 3));
     }
 }
 return 0;
