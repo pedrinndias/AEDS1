@@ -21,7 +21,7 @@ int main(){
     scanf("%d", &n);
     printf("Digite um numero real: ");
     scanf("%f", &x);
-    sequencia(n, x) = seq2;
+    double sequencia(n, x) = seq2;
     print("Sequencia: %.2f\n", seq2);
     return 0;
 }
