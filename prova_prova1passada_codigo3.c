@@ -1,7 +1,7 @@
 #include <stdio.h>
 double sequencia(int n, float x){
     int denominador=2, i;
-    float seq;
+    double seq;
     for (i=0; i<=n; i++){
         if (i==0){
             seq=0;
@@ -14,6 +14,7 @@ double sequencia(int n, float x){
         }
     return seq;
     }
+    
 int main(){
     int n;
     float x;
@@ -22,6 +23,6 @@ int main(){
     printf("Digite um numero real: ");
     scanf("%f", &x);
     sequencia(n, x);
-    print("Sequencia: %.2f\n",sequencia(n, x));
+    printf("Sequencia: %.2f\n",sequencia(n, x));
     return 0;
 }
