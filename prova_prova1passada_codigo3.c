@@ -16,12 +16,12 @@ double sequencia(int n, float x){
     }
 int main(){
     int n;
-    float x, seq2;
+    float x;
     printf("Digite um numero inteiro: ");
     scanf("%d", &n);
     printf("Digite um numero real: ");
     scanf("%f", &x);
-    double sequencia(n, x) = seq2;
-    print("Sequencia: %.2f\n", seq2);
+    sequencia(n, x);
+    print("Sequencia: %.2f\n",sequencia(n, x));
     return 0;
 }
