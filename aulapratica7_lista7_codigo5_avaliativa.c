@@ -1,7 +1,7 @@
 #include <stdio.h>
 int maior(int *num1, int *num2){
     int num_maior;
-    maior = *num1 > *num2 ? *num1 : *num2;
+    num_maior = *num1 > *num2 ? *num1 : *num2;
     return num_maior;
     }
 int main(){
