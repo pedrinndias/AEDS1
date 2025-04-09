@@ -1,5 +1,5 @@
 #include <stdio.h>
-void cont_par(n, *pares){
+void cont_par(int n, *pares){
     if(n%2==0 && n!=0){
         (*pares)++;
     }
@@ -10,7 +10,7 @@ int main(){
     do{ 
         printf("Digite um numero inteiro positivo (0 para sair): ");
         scanf("%d", &n);
-        cont_par (n, &pares);
+        cont_par(n, &pares);
     } while (n!=0);
     printf("%d numeros pares", pares );
     return 0;
