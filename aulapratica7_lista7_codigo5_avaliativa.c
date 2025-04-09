@@ -1,9 +1,9 @@
 #include <stdio.h>
-int maior(int *num1, *num2){
-    int maior;
+int maior(int *num1, int *num2){
+    int num_maior;
     maior= (*num1) > (*num2) ? (*num1) : (*num2);
-    return maior;
-}
+    return num_maior;
+    }
 int main(){
     int num1, num2;
     printf("Digite dois numeros inteiros: ");
