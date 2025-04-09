@@ -1,7 +1,7 @@
 #include <stdio.h>
     int soma_div(int n){
         int soma=0;
-        for(int=1; i<n; i++){
+        for(int i = 1; i<n; i++){
             if(n%i==0){
                 soma+=i;
             }
