@@ -1,6 +1,6 @@
 #include <stdio.h>
 void cont_par(int n, int *pares) {
-    if (n % 2 == 0 && *n != 0) {
+    if (n % 2 == 0 && n != 0) {
         (*pares)++; 
     }
 }
