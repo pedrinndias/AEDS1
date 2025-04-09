@@ -7,7 +7,7 @@ int main(){
     menor=x<y?x:y;
     for(int i=menor; i<=maior; i++){
         if(i%2!=0){
-            printf("%d", i);
+            printf("%d\n", i);
             impares ++;
         }
     }
