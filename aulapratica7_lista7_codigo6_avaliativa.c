@@ -1,12 +1,12 @@
 #include <stdio.h>
-float soma(int n){
-    float soma=0;
-    for(int i = 1; i<=n; i++){
-        soma += 1/i;
+float soma(int n) {
+    float soma = 0.0;
+    for (int i = 1; i <= n; i++) {
+        soma += 1.0 / i;
     }
     return soma;
 }
-int main(){
+int main() {
     int num;
     printf("Digite um numero inteiro positivo: ");
     scanf("%d", &num);
