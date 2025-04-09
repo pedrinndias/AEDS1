@@ -1,7 +1,7 @@
 #include <stdio.h>
 int soma(int n){
     int soma=0;
-    for(int i = 1; i<=soma; i++){
+    for(int i = 1; i<=n; i++){
         soma += 1/i;
     }
     return soma;
