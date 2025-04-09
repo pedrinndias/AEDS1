@@ -21,7 +21,7 @@ int main() {
     if (pertenceFibonacci(numero)) {
         printf("%d pertence a sequencia de Fibonacci.", numero);
     } else {
-        printf("%d não pertence a sequencia de Fibonacci.", numero);
+        printf("%d nao pertence a sequencia de Fibonacci.", numero);
     }
     return 0;
 }
