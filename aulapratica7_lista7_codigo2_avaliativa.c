@@ -12,7 +12,7 @@ int main(){
         }
     }
     if(impares==0){
-        printf("Nao existe numeros impares enre x e y")
+        printf("Nao existe numeros impares enre x e y");
     }
     return 0;
 }
