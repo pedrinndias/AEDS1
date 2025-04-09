@@ -6,12 +6,12 @@ void cont_par(int n, *pares){
     return;
 }
 int main(){
-    int n, pares=0;
+    int num, pares=0;
     do{ 
         printf("Digite um numero inteiro positivo (0 para sair): ");
         scanf("%d", &n);
-        cont_par(n, &pares);
+        cont_par (num, &pares);
     } while (n!=0);
-    printf("%d numeros pares", pares );
+    printf("%d numeros pares", pares);
     return 0;
 }
