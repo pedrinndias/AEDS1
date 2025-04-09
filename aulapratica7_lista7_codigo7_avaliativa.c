@@ -7,14 +7,12 @@ int potencia(int base, int expoente) {
 }
 int main() {
     int base, expoente;
-    printf("Digite a base: ");
-    scanf("%d", &base);
-    printf("Digite o expoente: ");
-    scanf("%d", &expoente);
+    printf("Digite a base e o expoente: ");
+    scanf("%d%d", &expoente, &base);
     if (expoente < 0) {
-        printf("Este programa não suporta expoentes negativos.\n");
+        printf("Este programa não suporta expoentes negativos.");
         return 1;
     }
-    printf("%d elevado a %d é: %d", base, expoente, potencia(base, expoente));
+    printf("%d elevado a %d eh: %d", base, expoente, potencia(base, expoente));
     return 0;
 }
