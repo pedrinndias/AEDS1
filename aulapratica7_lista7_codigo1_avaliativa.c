@@ -4,7 +4,7 @@ int main(){
     printf("Escreva um numero inteiro: \n");
     scanf("%d", &n);
     for(int i=1; i <= n; i++){
-        printf("%d\n",  multi*1);
+        printf("%d\n",  multi*i);
 }
 return 0;
 }
