@@ -9,7 +9,7 @@ int main(){
     int num, pares=0;
     do{ 
         printf("Digite um numero inteiro positivo (0 para sair): ");
-        scanf("%d", &n);
+        scanf("%d", &num);
         cont_par (num, &pares);
     } while (n!=0);
     printf("%d numeros pares", pares);
