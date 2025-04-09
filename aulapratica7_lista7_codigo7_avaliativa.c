@@ -8,7 +8,7 @@ int potencia(int base, int expoente) {
 int main() {
     int base, expoente;
     printf("Digite a base e o expoente: ");
-    scanf("%d%d", &expoente, &base);
+    scanf("%d%d", &base, &expoente);
     if (expoente < 0) {
         printf("Este programa não suporta expoentes negativos.");
         return 1;
