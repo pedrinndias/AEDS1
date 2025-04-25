@@ -6,15 +6,15 @@ void buscvetor (int vetor[], int num){
     int verificador;
     for (int i=0; i<20; i++)
     if (num == vetor[i]){
-        printf ("O numero aparece na posicao: %d\n" vetor[i]);
+        printf ("O numero aparece na posicao: %d\n", vetor[i]);
         verificador++;
     }
     if (verificador == 0)
-        printf("O numero nao aparece no intervalo")
+        printf("O numero nao aparece no intervalo");
     return;
 }
 
-int main{
+int main(){
     int vetor[20];
     int num;
     srand (time(NULL));
@@ -23,5 +23,5 @@ int main{
     }
     printf("Escreva um numero para ser buscado");
     scanf("%d", &num);
-    buscvetor (&vetor,num)
+    buscvetor (vetor[],num)
 }
