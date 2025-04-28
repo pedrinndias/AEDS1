@@ -6,7 +6,7 @@ int main(){
         scanf("%d", &veto[i]);
     }
     for (int i=0; i<10; i++){
-        printf("Elemento %d na posição %d \n", veto[i], i);
+        printf("Elemento %d na posiçao %d \n", veto[i], i);
     }
 return 0;
 }
