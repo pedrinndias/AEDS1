@@ -15,7 +15,7 @@ for (int i=0; i<5; i++){
     vetor3[i]=vetor1[i]+vetor2[i];
 }
 for (int i=0; i<5; i++){
-    printf("A soma do vetor 1 com o vetor 2 eh: \n");
+    printf("A soma do valor %d do vetor 1 com o vetor 2 eh: \n", i);
     printf("%d\n", vetor3[i]);
 }
 return 0;
