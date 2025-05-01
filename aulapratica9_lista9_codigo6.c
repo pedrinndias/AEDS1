@@ -8,7 +8,7 @@ int main() {
     printf("Digite os valores para preencher a matriz %dx%d:\n", LINHAS, COLUNAS);
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
-            printf("Digite o valor para a posição [%d][%d]: ", i, j);
+            printf("Digite o valor para a posicao [%d][%d]: ", i, j);
             scanf("%d", &matriz[i][j]);
         }
     }
@@ -36,6 +36,6 @@ int main() {
             soma += matriz[i][j];
         }
     }
-    printf("\nA soma dos elementos da matriz é: %d\n", soma);
+    printf("\nA soma dos elementos da matriz e: %d\n", soma);
     return 0;
 }
