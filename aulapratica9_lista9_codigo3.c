@@ -28,12 +28,3 @@ void trocarEImprimir(int vetor[], int posMenor) {
     }
     printf("\n");
 }
-int main() {
-    int meuVetor[5];
-    int posicaoDoMenor;
-    preencherVetor(meuVetor);
-    posicaoDoMenor = encontrarPosicaoMenor(meuVetor);
-    trocarEImprimir(meuVetor, posicaoDoMenor);
-    return 0;
-}
-
