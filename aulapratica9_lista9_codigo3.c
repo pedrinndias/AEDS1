@@ -31,8 +31,8 @@ void trocarEImprimir(int vetor[], int posMenor) {
 int main() {
     int meuVetor[5];
     int posicaoDoMenor;
-    preencherVetor(meuVetor[], 5);
-    posicaoDoMenor = encontrarPosicaoMenor(meuVetor[]);
-    trocarEImprimir(meuVetor[], posicaoDoMenor);
+    preencherVetor(&meuVetor[]);
+    posicaoDoMenor = encontrarPosicaoMenor(&meuVetor[]);
+    trocarEImprimir(&meuVetor[], posicaoDoMenor);
     return 0;
 }
