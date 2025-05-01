@@ -8,7 +8,7 @@ int main() {
     printf("Digite os valores para preencher a matriz %dx%d:\n", LINHAS, COLUNAS);
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
-            printf("Digite o valor para a posicao [%d][%d]\n: ", i, j);
+            printf("Digite o valor para a posicao [%d][%d]:\n ", i, j);
             scanf("%d", &matriz[i][j]);
         }
     }
