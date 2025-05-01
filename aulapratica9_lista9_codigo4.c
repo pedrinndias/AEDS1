@@ -3,7 +3,7 @@ int subvetores(int A[], int B[], int C[]){
     for (int i=0; i<10; i++){
         C[i] = A[i] - B[i];
     }
-    return C[];
+    return C[i];
 }
 int main(){
     int A[10];
@@ -17,8 +17,8 @@ int main(){
         printf("Digite o %d elemento do vetor B: ", i+1);
         scanf("%d", &B[i]);
     }
-    subvetores(A, B, C);
     for (int i=0; i<10; i++){
+        C[i] = subvetores(A, B, C);
         printf("O %d elemento do vetor C eh: %d\n", i+1, C[i]);
     }
     return 0;
