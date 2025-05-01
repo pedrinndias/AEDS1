@@ -2,8 +2,9 @@
 int subvetores(int A[], int B[], int C[]){
     for (int i=0; i<10; i++){
         C[i] = A[i] - B[i];
+        return C[i];
     }
-    return C[i];
+    return 0;
 }
 int main(){
     int A[10];
