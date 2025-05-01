@@ -1,30 +1,30 @@
 #include <stdio.h>
-void preencheValores (int vetor[]) {
+void preencheValores(int vetor[]) {
     for (int i = 0; i < 10; i++) {
-        printf("Digite o %d elemento do vetor: ", i + 1);
+        printf("Elemento %d: ", i + 1);
         scanf("%d", &vetor[i]);
     }
 }
-void copiaNegativos (int vetor[], int vetorNegativos[],int contador) {
+int copiaNegativos(int vetor[], int vetorNegativos[]) {
+    int indiceNegativos = 0;
     for (int i = 0; i < 10; i++) {
         if (vetor[i] < 0) {
-            vetorNegativos[contador] = vetor[i];
-            contador++;
+            vetorNegativos[indiceNegativos] = vetor[i];
+            indiceNegativos++;
         }
     }
-    vetorNegativos[contador+1] = 0;
+    vetorNegativos[indiceNegativos] = 0;
+    return indiceNegativos;
 }
 int main() {
     int vetor[10];
     int vetorNegativos[11];
-    int contador = 0;
+    int numNegativos;
     preencheValores(vetor);
-    copiaNegativos(vetor, vetorNegativos, contador);
-    printf("Os valores negativos do vetor sao:\n");
-    for (int i = 0; i < 11; i++) {
-        if (vetorNegativos[i] < 0) {
-            printf("%d ", vetorNegativos[i]);
-        }
+    numNegativos = copiaNegativos(vetor, vetorNegativos);
+    printf("\nOs valores negativos do vetor sao:\n");
+    for (int i = 0; i < numNegativos; i++) {
+        printf("%d ", vetorNegativos[i]);
     }
     printf("\n");
     return 0;
