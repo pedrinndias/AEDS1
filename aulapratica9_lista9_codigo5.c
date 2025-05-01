@@ -17,7 +17,7 @@ void copiaNegativos (int vetor[], int vetorNegativos[],int contador) {
 int main() {
     int vetor[10];
     int vetorNegativos[11];
-    int contador = 0
+    int contador = 0;
     preencheValores(vetor);
     copiaNegativos(vetor, vetorNegativos, contador);
     printf("Os valores negativos do vetor sao:\n");
