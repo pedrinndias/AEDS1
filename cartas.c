@@ -27,9 +27,6 @@ for (int i = 0; i < 5; i++){ //1 2 3 4 5      9 8 7 6 5
     if (decrescente[i] == seq[i]){
         contD++;
     }
-    if (NAOordenada[i] != crescente[i] && NAOordenada[i] != decrescente[i]){
-        contN++;
-    }
 }
 if (contC == 5){
     printf("C");
