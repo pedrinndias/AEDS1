@@ -1,26 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
-int main(){
-    int intervalo, tam, *notas;
-    float media = 0;
-    scanf("%d", &intervalo);
-    do
-    {
-    scanf("%d", &tam);
-    notas = (int*)malloc(tam*sizeof(int));
-    for (int i = 0; i < tam; i++)
-        {
+#include <stdlib.h> 
+int main() {
+    int C;
+    scanf("%d", &C);
+    while (C--) {
+        int N;
+        scanf("%d", &N);
+        int *notas;
+        notas = (int *)malloc(N * sizeof(int));
+        double soma = 0.0;
+        for (int i = 0; i < N; i++) {
             scanf("%d", &notas[i]);
+            soma += notas[i];
         }
-    for (int i = 0; i < tam; i++)
-        {
-            media += notas[i];
+        double media = soma / N;
+        int acima_da_media = 0;
+        for (int i = 0; i < N; i++) {
+            if (notas[i] > media) {
+                acima_da_media++;
+            }
         }
-    media = media/tam;
-    printf("%.3f\n", media); 
-
-    intervalo --;
-    } while (intervalo == 0);
-    free(notas);
+        double percentual = ((double)acima_da_media / N) * 100.0;
+        printf("%.3f%%\n", percentual);
+    }
     return 0;
 }
