@@ -26,16 +26,16 @@ int main() {
     scanf("%d", &K); 
     int fibonot_count = 0; 
     int resultado_fibonot = 0; 
-    for (int numero_candidato = 1;numero_candidato <= k ; numero_candidato++) {
- 
+
+    for (int numero_candidato = 1; ; numero_candidato++) {
         if (eh_fibonacci(numero_candidato) == 0) { 
             fibonot_count++;
             if (fibonot_count == K) {
                 resultado_fibonot = numero_candidato;
                 break;
             }
-    }
+        }
+    } 
     printf("%d", resultado_fibonot);
-    return 0;
-}
+    return 0; 
 }
