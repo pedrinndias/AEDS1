@@ -19,11 +19,10 @@ int main() {
         linha[strcspn(linha, "\n")] = '\0';
 
         if (strcmp(linha, "FIM") == 0) {
-            printf("\n",);
+            printf("\n");
             break;
         }
 
-        // Chama a função para contar os caracteres maiúsculos na linha atual [1]
         int maiusculas = contarMaiusculas(linha);
     
         printf("%d\n", maiusculas);
