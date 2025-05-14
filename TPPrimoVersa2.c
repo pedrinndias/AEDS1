@@ -15,7 +15,7 @@ int verificadorP(int i){
 }
 
 int main(){
-    int cont = 0, menor, maior, primo[maior - menor];
+    int cont = 0, menor, maior, primo[maior - menor + 1];
     scanf("%d %d", &menor, &maior);
     for (int i = menor; i <= maior; i++){
         if (verificadorP(i) == 1){
