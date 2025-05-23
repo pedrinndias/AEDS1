@@ -1,3 +1,4 @@
+// Precisa-se corrigir o código abaixo, pois ele não compila.
 #include <stdio.h>
 #include <stdlib.h>
 int ehprimo(int n) {
