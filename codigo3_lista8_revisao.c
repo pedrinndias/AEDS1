@@ -16,7 +16,7 @@ int main(){
         scanf("%d", &vetor2[i]);
     }
     int *vetorSoma;
-    vetorSoma = (int*) calloc(TAM * sizeof(int));
+    vetorSoma = (int*) malloc(TAM * sizeof(int));
     if (vetorSoma == NULL) {
         printf("Memoria insuficiente\n");
         return 1;
