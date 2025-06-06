@@ -1,0 +1,5 @@
+Maria 8.5
+Joao 7.0
+Ana 9.2
+Carlos 6.8
+Beatriz 10.0
