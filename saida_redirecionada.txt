@@ -1,0 +1,10 @@
+Processando dados de 'entrada_redirecionada.txt' para 'saida_redirecionada.txt':
+Numeros lidos:
+- 10
+- 20
+- 30
+- 40
+- 50
+Soma dos 5 numeros lidos: 150
+Media dos numeros lidos: 30.00
+Processamento concluido.
