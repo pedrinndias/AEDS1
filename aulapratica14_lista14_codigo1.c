@@ -25,7 +25,7 @@ int main(){
     for(int i=0; i<TAM; i++){
         printf("*** Preenchendo dados da pessoa %d ***\n", i+1);
         printf("\n Digite o nome: ");
-        gets (p[i].nome);
+        scanf(" %[^\n]", p[i].nome);;
         printf("\n Digite a altura: ");
         scanf("%f", &p[i].altura);
         p[i].nascimento = preencherData(i);
