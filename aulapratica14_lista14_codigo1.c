@@ -24,12 +24,12 @@ int main(){
     pessoa p[TAM];
     for(int i=0; i<TAM; i++){
         printf("*** Preenchendo dados da pessoa %d ***\n", i+1);
-        printf("Digite o nome: ");
+        printf("\n Digite o nome: ");
         gets (p[i].nome);
-        printf("Digite a altura: ");
+        printf("\n Digite a altura: ");
         scanf("%f", &p[i].altura);
         p[i].nascimento = preencherData(i);
-        printf("*** Dados preenchidos com sucesso! ***\n");
+        printf("\n *** Dados preenchidos com sucesso! ***\n");
     }
     printf("\n\n*** Dados das pessoas ***\n");
     for(int i=0; i<TAM; i++){
