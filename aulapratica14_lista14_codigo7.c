@@ -31,7 +31,7 @@ int main(){
                         float distancia = sqrt(pow(p.x[1] - p.x[0], 2) + pow(p.y[1] - p.y[0], 2));
                         printf("\n Distancia entre os pontos: %.2f\n", distancia);
                         break;
-                    }
+                    
             case 4:
                 printf("\n Saindo do programa...\n");
                 break;
