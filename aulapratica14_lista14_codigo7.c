@@ -28,7 +28,7 @@ int main(){
                 scanf("%f", &p.y[1]);
                 break;
             case 3:
-                    if(p.x[0] == NULL || p.y[0] == NULL || p.x[1] == NULL || p.y[1] == NULL){
+                    if(p.x[0] == void || p.y[0] == void || p.x[1] == void || p.y[1] == void){
                         printf("\n Erro: Ponto(s) nao definido(s). Digite as coordenadas primeiro.\n");
                         break;
                     }else{
