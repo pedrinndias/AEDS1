@@ -10,11 +10,11 @@ typedef struct livro{
     char autor[50];
     data publicacao;
 }livro;
-void imprimir(livro L, int i){
+void imprimir(livro *L, int i){
     printf("***Lirvo Cadastrado %d***\n", i+1);
-    printf("Titulo: %s\n", L+i.titulo);
-    printf("Autor: %s\n", L+i.autor);
-    printf("Data de Publicacao: %d/%d/%d\n", (L+i.publicacao).dia, (L+i.publicacao).mes, (L+i.publicacao).ano);
+    printf("Titulo: %s\n", L[i].titulo);
+    printf("Autor: %s\n", L[i].autor);
+    printf("Data de Publicacao: %d/%d/%d\n", (L[i].publicacao).dia, (L[i].publicacao).mes, (L[i].publicacao).ano);
 }
 int main(){
     int n;
@@ -28,16 +28,16 @@ int main(){
     for(int i=0; i<n; i++){
         printf("*** Preenchendo dados do livro %d ***\n", i+1);
         printf("\n Digite o titulo: ");
-        scanf(" %[^\n]", (L+i).titulo);
+        scanf(" %[^\n]", L[i].titulo);
         printf("\n Digite o autor: ");
-        scanf(" %[^\n]", (L+i).autor);
+        scanf(" %[^\n]", L[i].autor);
         printf("\n Digite a data de publicacao(dd/mm/aaaa): ");
-        scanf("%d/%d/%d", &(L+i).publicacao.dia, &(L+i).publicacao.mes, &(L+i).publicacao.ano);
+        scanf("%d/%d/%d", &L[i].publicacao.dia, &L[i].publicacao.mes, &L[i].publicacao.ano);
         printf("\n *** Dados preenchidos com sucesso! ***\n");
     }
     printf("\n\n*** Dados dos livros ***\n");
     for(int i=0; i<n; i++){
-        imprimir(L[i], i);
+        imprimir(L, i);
     }
     free(L);
     return 0;
