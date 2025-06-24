@@ -28,10 +28,6 @@ int main(){
                 scanf("%f", &p.y[1]);
                 break;
             case 3:
-                    if(p.x[0] == NULL || p.y[0] == NULL || p.x[1] == NULL || p.y[1] == NULL){
-                        printf("\n Erro: Ponto(s) nao definido(s). Digite as coordenadas primeiro.\n");
-                        break;
-                    }else{
                         float distancia = sqrt(pow(p.x[1] - p.x[0], 2) + pow(p.y[1] - p.y[0], 2));
                         printf("\n Distancia entre os pontos: %.2f\n", distancia);
                         break;
