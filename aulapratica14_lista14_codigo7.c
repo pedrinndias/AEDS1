@@ -39,7 +39,7 @@ int main(){
             case 4:
                 printf("\n Saindo do programa...\n");
                 break;
-        }while (aux != 4);   
-    }
+        }   
+    }while (aux != 4);
     return 0;
 }
