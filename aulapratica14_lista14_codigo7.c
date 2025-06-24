@@ -28,7 +28,6 @@ int main(){
                 scanf("%f", &p.y[1]);
                 break;
             case 3:
-                {
                     if(p.x[0] == NULL || p.y[0] == NULL || p.x[1] == NULL || p.y[1] == NULL){
                         printf("\n Erro: Ponto(s) nao definido(s). Digite as coordenadas primeiro.\n");
                         break;
@@ -37,11 +36,10 @@ int main(){
                         printf("\n Distancia entre os pontos: %.2f\n", distancia);
                         break;
                     }
-                }
             case 4:
                 printf("\n Saindo do programa...\n");
                 break;
-    }while (aux != 4);
-    free(p);
-    return 0;    
+        }while (aux != 4);   
+    }
+    return 0;
 }
