@@ -84,39 +84,5 @@ int main() {
     cin >> totalAndares;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     meuElevador.inicializa(capacidade, totalAndares);
-    meuElevador.imprimirEstadoElevador();
-    meuElevador.entra();
-    meuElevador.entra();
-    meuElevador.imprimirEstadoElevador();
-    meuElevador.sai();
-    meuElevador.imprimirEstadoElevador();
-    meuElevador.sobe();
-    meuElevador.sobe();
-    meuElevador.imprimirEstadoElevador();
-    meuElevador.desce();
-    meuElevador.imprimirEstadoElevador();
-    cout << "\n--- Testando limites ---" << endl;
-    for (int i = 0; i <= meuElevador.getTotalAndaresPredio() + 1; ++i) {
-        meuElevador.sobe();
-    }
-    meuElevador.imprimirEstadoElevador();
-    for (int i = 0; i <= meuElevador.getTotalAndaresPredio() + 1; ++i) {
-        meuElevador.desce();
-    }
-    meuElevador.imprimirEstadoElevador();
-    cout << "\n--- Testando capacidade ---" << endl;
-    for (int i = 0; i <= meuElevador.getCapacidadeElevador() + 1; ++i) {
-        meuElevador.entra();
-    }
-    meuElevador.imprimirEstadoElevador();
-    for (int i = 0; i <= meuElevador.getCapacidadeElevador() + 1; ++i) {
-        meuElevador.sai();
-    }
-    meuElevador.imprimirEstadoElevador();
-    cout << "\n--- Dados finais usando metodos GET ---" << endl;
-    cout << "Andar atual (GET): " << meuElevador.getAndarAtual() << endl;
-    cout << "Pessoas no elevador (GET): " << meuElevador.getPessoasNoElevador() << endl;
-    cout << "Capacidade (GET): " << meuElevador.getCapacidadeElevador() << endl;
-    cout << "Total de andares (GET): " << meuElevador.getTotalAndaresPredio() << endl;
     return 0;
 }
