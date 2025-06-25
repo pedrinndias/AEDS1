@@ -29,30 +29,16 @@ public:
         }
     }
     void aumentarCanal() {
-        if (canal < CANAL_MAXIMO) {
-            canal++;
-            cout << "Canal aumentado para: " << canal << endl;
-        } else {
-            canal = CANAL_MINIMO;
-            cout << "Canal voltou para o minimo (" << CANAL_MINIMO << ")." << endl;
-        }
+        canal++;
+        cout << "Canal aumentado para: " << canal << endl;
     }
     void diminuirCanal() {
-        if (canal > CANAL_MINIMO) {
-            canal--;
-            cout << "Canal diminuido para: " << canal << endl;
-        } else {
-            canal = CANAL_MAXIMO;
-            cout << "Canal foi para o maximo (" << CANAL_MAXIMO << ")." << endl;
-        }
+        canal--;
+        cout << "Canal diminuido para: " << canal << endl;
     }
     void trocarCanal(int novoCanal) {
-        if (novoCanal >= CANAL_MINIMO && novoCanal <= CANAL_MAXIMO) {
-            canal = novoCanal;
-            cout << "Canal trocado para: " << canal << endl;
-        } else {
-            cout << "Canal " << novoCanal << " e invalido. Canal atual permaneceu " << canal << endl;
-        }
+        canal = novoCanal;
+        cout << "Canal trocado para: " << canal << endl;
     }
     int getCanal() {
         return canal;
@@ -69,5 +55,13 @@ public:
 };
 int main() {
     Televisao minhaTV;
+    minhaTV.exibirStatus();
+    minhaTV.aumentarCanal();
+    minhaTV.trocarCanal(999);
+    minhaTV.aumentarVolume();
+    minhaTV.exibirStatus();
+    minhaTV.diminuirCanal();
+    minhaTV.diminuirCanal();
+    minhaTV.exibirStatus();
     return 0;
 }
