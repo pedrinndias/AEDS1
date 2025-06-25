@@ -7,12 +7,13 @@ typedef struct ponto2d{
 int main(){
     ponto2d p;
     int aux;
+    float distancia;
     do{
         printf("\n *** Menu Interativo *** \n");
         printf("\n 1- Digitar coordenadas do ponto inicial[x,y]");
         printf("\n 2- Digitar coordenadas do ponto final[x,y]");
         printf("\n 3- Calcular distancia entre os pontos");
-        printf("\n 4- Sair");
+        printf("\n 4- Sair \n");
         scanf("%d", &aux);
         switch(aux){
             case 1:
@@ -28,7 +29,7 @@ int main(){
                 scanf("%f", &p.y[1]);
                 break;
             case 3:
-                float distancia = sqrt(pow(p.x[1] - p.x[0], 2) + pow(p.y[1] - p.y[0], 2));
+                distancia = sqrt(pow((p.x[1] - p.x[0]), 2) + pow((p.y[1] - p.y[0]), 2));
                 printf("\n Distancia entre os pontos: %.2f\n", distancia);
                 break;
                     
