@@ -49,6 +49,7 @@ int main(){
     cout << "*** Testando aplicacao ***" << endl;
     int aux;
     do{
+        
         cout << "1- Adicionar +1 pessoa no elevador" << endl;
         cout << "2- Retirar -1 pessoa do elevador " << endl;
         cout << "3- Subir +1 andar" << endl;
