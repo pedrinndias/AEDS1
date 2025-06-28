@@ -14,9 +14,9 @@ class CirculoSimples{
             this ->raio = raio;
             this ->dx = dx;
             this ->dy = dy;
-            this ->area = area(raio);
-            this ->circunferencia = circunferencia(float raio);
-            this ->distanciaCentroCirculos = distanciaCentroCirculos(dx, dy);
+            this ->area = area(this->raio);
+            this ->circunferencia = circunferencia(this->raio);
+            this ->distanciaCentroCirculos = distanciaCentroCirculos(this->dx, this->dy);
         }
 
         float raio=0.0;
@@ -31,9 +31,9 @@ class CirculoSimples{
             this ->x2 = x2;
             this ->y2 = y2;
         }
-        void setDistanciaCentroCirculos(float dx, float dy){
-            this ->dx = abs(x1 - x2);
-            this ->dy = abs(x1 - y2);
+        void setDistanciaCentroCirculos(){
+            this->dx = abs(this->x1 - this->x2);
+            this->dy = abs(this->y1 - this->y2);
         }
 
         double getArea(){return area(raio);}
@@ -51,6 +51,7 @@ int main(){
         float raio=0.0;
         float x1=0.0, y1=0.0, x2=0.0, y2=0.0, dx=0.0, dy=0.0;
         int aux;
+        CirculoSimples meuCirculo;
         do{
             cout << "*** Circulo Simples ***" << endl;
             cout << "1 - Definir Raio" << endl;
@@ -66,39 +67,39 @@ int main(){
             switch(aux){
                 case 1:
                 cout <<" Digite o raio do circulo: ";
-                cin >> CirculoSimples->setRaio(raio);
+                cin >> meuCirculo.setRaio(raio);
                 break;
 
                 case 2:
                 int aumento=0;
                 cout <<"Digite o aumento percentual do raio: ";
                 cin >> aumento;
-                CirculoSimples->setAumentarRaio(aumento);
+                meuCirculo.setAumentarRaio(aumento);
                 break;
 
                 case 3:
                 cout << "Digite as coordenadas do centro do circulo 1 (x y): ";
                 cin >> x1 >> y1;
-                CirculoSimples->setCentrocirculos1(x1, y1);
+                meuCirculo.setCentrocirculos1(x1, y1);
                 break;
 
                 case 4:
                 cout << "Digite as coordenadas do centro do circulo 2 (x y): ";
                 cin >> x2 >> y2;
-                CirculoSimples->setCentrocirculos1(x2, y2);
+                meuCirculo.setCentrocirculos1(x2, y2);
                 break;
 
                 case 5:
                 CirculoSimples->setDistanciaCentroCirculos(x1, y1, x2, y2);
-                cout << "Distancia entre os centros dos circulos: " << CirculoSimples->getDistanciaCentroCirculos() << endl;
+                cout << "Distancia entre os centros dos circulos: " << meuCirculo.getDistanciaCentroCirculos() << endl;
                 break;
 
                 case 6:
-                cout << "Area do circulo:" << CirculoSimples->getArea() << endl;
+                cout << "Area do circulo:" << meuCirculo.getArea() << endl;
                 break;
                 
                 case 7:
-                cout << "Circunferencia do circulo:" << CirculoSimples->getcircunferencia() << endl;
+                cout << "Circunferencia do circulo:" << meuCirculo.getcircunferencia() << endl;
                 break;
 
                 case 8:
