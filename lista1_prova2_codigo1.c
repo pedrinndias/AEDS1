@@ -24,7 +24,7 @@ else if(resultado == 0){
     printf("Nao existe vogal!");
 }
 else{
-    printf("Existem %d vogais!", resultado);
+    printf("Existem %d vogais", resultado);
 }
 return 0;
 }
