@@ -12,7 +12,7 @@ int contaVogal(char *string){
     }
     return cont + contaVogal(string + 1);
 }
-int main(void){
+int main(){
 char string[101];
 printf("Digite uma palavra ou texto: ");
 scanf("%[^\n]", string);
