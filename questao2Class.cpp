@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+using namespace std;
 
 class Eletrodomestico{
     private:
@@ -41,12 +42,12 @@ int main(){
         cin >> aux;
         switch(aux){
             case 1:
-                cout << "Escreva o valor da potencia: " << endl;
+                cout << "Escreva o valor da potencia: ";
                 cin >> potencia;
                 E.setPotencia(potencia);
                 break;
             case 2:
-                cout << "Escreva o valor do tempo: " << endl;
+                cout << "Escreva o valor do tempo: ";
                 cin >> tempo;
                 E.setTempo(tempo);
                 break;
