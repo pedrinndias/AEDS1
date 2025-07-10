@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Avançado de Cores para Análise de Dados e ML</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF4E50, #FC913A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <header class="text-center my-8 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-bold gradient-text">Guia Avançado de Cores</h1>
+            <p class="text-lg md:text-xl text-slate-600 mt-4 max-w-4xl mx-auto">Da Teoria à Prática em Python para Visualizações de Alto Impacto em Análise de Dados e Machine Learning.</p>
+        </header>
+
+        <main class="space-y-16">
+           
+            <section id="vocabulario">
+                <h2 class="text-3xl font-bold text-center mb-2">O Vocabulário da Cor</h2>
+                <p class="text-center text-slate-600 max-w-3xl mx-auto mb-10">O tipo de dado que você visualiza dita a paleta que você deve usar. Escolher a paleta errada é como falar o idioma errado para os seus dados.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="card flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-[#FF4E50]">1. Paleta Categórica</h3>
+                        <p class="text-slate-600 mb-4 flex-grow"><b>Use para:</b> Distinguir grupos discretos sem ordem (ex: tipos de produto, países).<br><b>Objetivo:</b> Máxima distinção visual.</p>
+                        <div class="chart-container h-56 md:h-64">
+                            <canvas id="categoricalChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-[#FC913A]">2. Paleta Sequencial</h3>
+                        <p class="text-slate-600 mb-4 flex-grow"><b>Use para:</b> Dados numéricos que vão de baixo para alto (ex: receita, temperatura).<br><b>Objetivo:</b> Mostrar magnitude.</p>
+                        <div class="chart-container h-56 md:h-64">
+                            <canvas id="sequentialChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card flex flex-col">
+                        <h3 class="font-bold text-xl mb-2 text-[#F9D423]">3. Paleta Divergente</h3>
+                        <p class="text-slate-600 mb-4 flex-grow"><b>Use para:</b> Dados com um ponto central significativo (ex: correlação, lucro/prejuízo).<br><b>Objetivo:</b> Enfatizar desvios.</p>
+                        <div class="chart-container h-56 md:h-64">
+                            <canvas id="divergingChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="border-slate-200">
+
+            <section id="rainbow-problem">
+                <h2 class="text-3xl font-bold text-center mb-4">O Inimigo Oculto: A Paleta Arco-Íris</h2>
+                <p class="text-center text-slate-600 max-w-3xl mx-auto mb-10">A paleta `jet` (arco-íris) é popular, mas desastrosa para a análise. Sua luminosidade não uniforme cria falsas fronteiras e esconde detalhes, distorcendo a percepção dos dados.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-semibold mb-4 text-center">❌ Incorreto: Paleta Arco-Íris (Não Uniforme)</h3>
+                        <div class="w-full h-12 rounded-lg" style="background: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);"></div>
+                        <p class="text-sm text-slate-500 mt-4">
+                            Os "saltos" de brilho entre ciano e amarelo criam a falsa impressão de uma mudança abrupta. A transição não é fiel à progressão linear dos dados.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold mb-4 text-center">✅ Correto: Paleta Perceptualmente Uniforme (Viridis)</h3>
+                        <div class="w-full h-12 rounded-lg" style="background: linear-gradient(to right, #440154, #3b528b, #21918c, #5ec962, #fde725);"></div>
+                        <p class="text-sm text-slate-500 mt-4">
+                            A transição de luminosidade é suave e constante. Passos iguais nos dados correspondem a passos iguais na percepção da cor, garantindo uma representação honesta.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="border-slate-200">
+            
+            <section id="applications">
+                <h2 class="text-3xl font-bold text-center mb-10">Cor em Ação: Machine Learning em Python</h2>
+                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">Visualizando a Importância de Features</h3>
+                        <p class="text-slate-600 mb-4">A importância de uma feature é um dado quantitativo e ordenado. Uma paleta **sequencial** reforça essa hierarquia visualmente, onde a cor mais intensa representa a maior importância. Usar cores categóricas aqui seria um erro, pois implicaria que as features são apenas diferentes, não mais ou menos importantes.</p>
+                        <div class="chart-container h-80">
+                            <canvas id="featureImportanceChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">Decodificando uma Matriz de Correlação</h3>
+                        <p class="text-slate-600 mb-4">Uma matriz de correlação tem um ponto central (0) e valores que divergem para positivo (1) e negativo (-1). Uma paleta **divergente** é perfeita para isso. Ela usa cores distintas para correlações positivas e negativas, permitindo identificar instantaneamente a natureza e a força das relações entre as variáveis.</p>
+                        <div class="w-full aspect-square max-w-sm mx-auto grid grid-cols-4 gap-1 mt-6">
+                            <div class="bg-[#FF4E50] rounded flex items-center justify-center text-white font-bold">1.0</div>
+                            <div class="bg-[#f9a278] rounded flex items-center justify-center text-white font-bold">0.6</div>
+                            <div class="bg-[#d1d5db] rounded flex items-center justify-center text-slate-800 font-bold">-0.1</div>
+                            <div class="bg-[#b0cce3] rounded flex items-center justify-center text-slate-800 font-bold">-0.4</div>
+                            <div class="bg-[#f9a278] rounded flex items-center justify-center text-white font-bold">0.6</div>
+                            <div class="bg-[#FF4E50] rounded flex items-center justify-center text-white font-bold">1.0</div>
+                            <div class="bg-[#f79461] rounded flex items-center justify-center text-white font-bold">0.7</div>
+                            <div class="bg-[#d1d5db] rounded flex items-center justify-center text-slate-800 font-bold">-0.2</div>
+                            <div class="bg-[#d1d5db] rounded flex items-center justify-center text-slate-800 font-bold">-0.1</div>
+                            <div class="bg-[#f79461] rounded flex items-center justify-center text-white font-bold">0.7</div>
+                            <div class="bg-[#FF4E50] rounded flex items-center justify-center text-white font-bold">1.0</div>
+                            <div class="bg-[#e9e262] rounded flex items-center justify-center text-slate-800 font-bold">0.3</div>
+                            <div class="bg-[#b0cce3] rounded flex items-center justify-center text-slate-800 font-bold">-0.4</div>
+                            <div class="bg-[#d1d5db] rounded flex items-center justify-center text-slate-800 font-bold">-0.2</div>
+                            <div class="bg-[#e9e262] rounded flex items-center justify-center text-slate-800 font-bold">0.3</div>
+                            <div class="bg-[#FF4E50] rounded flex items-center justify-center text-white font-bold">1.0</div>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+            
+            <hr class="border-slate-200">
+
+            <section id="accessibility">
+                <h2 class="text-3xl font-bold text-center mb-10">Checklist Final: Design Inclusivo e Eficaz</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-4">1. Contraste é Fundamental</h3>
+                        <p class="text-slate-600 mb-4">Garanta que textos e elementos importantes sejam legíveis. Use ferramentas para verificar a taxa de contraste (WCAG AA requer > 4.5:1 para texto normal).</p>
+                        <div class="p-4 rounded-lg bg-slate-100 space-y-2">
+                             <p class="text-lg text-[#FF4E50] font-semibold bg-white p-2 rounded">Bom Contraste</p>
+                             <p class="text-lg text-[#F9D423] font-semibold bg-white p-2 rounded">Contraste Pobre</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-4">2. Projete para Daltonismo</h3>
+                        <p class="text-slate-600 mb-4">Cerca de 8% dos homens têm alguma deficiência de visão de cores. Evite combinações problemáticas como vermelho/verde. Use paletas seguras.</p>
+                        <div class="space-y-3">
+                            <p class="font-semibold">Combinação Ruim:</p>
+                            <div class="flex space-x-2"><div class="w-8 h-8 rounded-full bg-red-500"></div><div class="w-8 h-8 rounded-full bg-green-500"></div></div>
+                            <p class="font-semibold mt-2">Combinação Boa (Cor + Forma):</p>
+                            <div class="flex space-x-2 items-center"><div class="w-8 h-8 rounded-full bg-[#0072B2]"></div><div class="w-8 h-8 rounded-md bg-[#D55E00]"></div></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="font-bold text-xl mb-4">3. Use Redundância Visual</h3>
+                        <p class="text-slate-600 mb-4">Não confie apenas na cor para transmitir informações. Use rótulos, ícones, texturas ou estilos de linha para reforçar a mensagem e garantir a compreensão.</p>
+                        <div class="chart-container h-48 md:h-56">
+                            <canvas id="redundancyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-16 py-8 border-t border-slate-200">
+            <p class="text-slate-500">Infográfico gerado para aprofundar o conhecimento em visualização de dados.</p>
+            <p class="text-sm text-slate-400 mt-2">Construído com Tailwind CSS e Chart.js. Paleta de Cores: "Energetic & Playful".</p>
+        </footer>
+    </div>
+
+    <script>
+        // Palette: Energetic & Playful
+        // #FF4E50 (red-pink), #FC913A (orange), #F9D423 (yellow)
+        const energeticPalette = {
+            red: '#FF4E50',
+            orange: '#FC913A',
+            yellow: '#F9D423',
+            blue: '#0072B2', // Accessible accent
+            darkOrange: '#D55E00' // Accessible accent
+        };
+
+        function wrapLabels(label, maxWidth) {
+            if (typeof label !== 'string') return label;
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#475569',
+                        font: { family: "'Inter', sans-serif" }
+                    }
+                },
+                tooltip: {
+                    callbacks: { title: tooltipTitleCallback }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#475569', font: { family: "'Inter', sans-serif" }},
+                    grid: { display: false }
+                },
+                y: {
+                    ticks: { color: '#475569', font: { family: "'Inter', sans-serif" }},
+                    grid: { color: '#e2e8f0' }
+                }
+            }
+        };
+
+        // Categorical Chart
+        new Chart(document.getElementById('categoricalChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Produto A', 'Produto B', 'Produto C', 'Produto D'],
+                datasets: [{
+                    label: 'Vendas',
+                    data: [12, 19, 8, 15],
+                    backgroundColor: [energeticPalette.red, energeticPalette.orange, energeticPalette.yellow, energeticPalette.blue],
+                    borderWidth: 0
+                }]
+            },
+            options: { ...defaultChartOptions, plugins: { ...defaultChartOptions.plugins, legend: { display: false } } }
+        });
+
+        // Sequential Chart
+        new Chart(document.getElementById('sequentialChart'), {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'Receita',
+                    data: [2, 4, 7, 11, 18],
+                    backgroundColor: 'rgba(252, 145, 58, 0.2)',
+                    borderColor: energeticPalette.orange,
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3
+                }]
+            },
+            options: { ...defaultChartOptions, plugins: { ...defaultChartOptions.plugins, legend: { display: false } } }
+        });
+        
+        // Diverging Chart
+        new Chart(document.getElementById('divergingChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai'],
+                datasets: [{
+                    label: 'Variação do Lucro (%)',
+                    data: [15, -8, 22, -4, 10],
+                    backgroundColor: [15, -8, 22, -4, 10].map(v => v > 0 ? energeticPalette.red : energeticPalette.blue),
+                    borderWidth: 0
+                }]
+            },
+            options: { ...defaultChartOptions, plugins: { ...defaultChartOptions.plugins, legend: { display: false } } }
+        });
+        
+        // Feature Importance Chart
+        new Chart(document.getElementById('featureImportanceChart'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    wrapLabels('Rendimento Anual do Cliente', 18),
+                    wrapLabels('Score de Crédito (0-1000)', 18),
+                    wrapLabels('Tempo de Relacionamento (anos)', 18),
+                    wrapLabels('Idade do Cliente', 18),
+                    wrapLabels('Última Interação (dias)', 18)
+                ],
+                datasets: [{
+                    label: 'Importância',
+                    data: [0.55, 0.25, 0.12, 0.06, 0.02],
+                    backgroundColor: [
+                        '#FF4E50', // Most important
+                        '#FC7745',
+                        '#F99F3A',
+                        '#F9C82F',
+                        '#F9F123'  // Least important
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y', plugins: { ...defaultChartOptions.plugins, legend: { display: false } } }
+        });
+        
+        // Redundancy Chart
+        new Chart(document.getElementById('redundancyChart'), {
+            type: 'line',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'Produto A',
+                    data: [10, 12, 15, 13],
+                    borderColor: energeticPalette.blue,
+                    backgroundColor: energeticPalette.blue,
+                    tension: 0.1,
+                    borderWidth: 3,
+                }, {
+                    label: 'Produto B',
+                    data: [8, 9, 7, 10],
+                    borderColor: energeticPalette.darkOrange,
+                    backgroundColor: energeticPalette.darkOrange,
+                    tension: 0.1,
+                    borderDash: [6, 6],
+                    borderWidth: 3,
+                }]
+            },
+            options: { ...defaultChartOptions, plugins: { ...defaultChartOptions.plugins, legend: { position: 'bottom' } } }
+        });
+    </script>
+</body>
+</html>
